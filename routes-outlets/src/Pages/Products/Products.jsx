@@ -6,12 +6,13 @@ const Products = () => {
   return (
     <>
     { /* Hvis outlet er tom, så vis ProductInfo ellers vis indhold af outlet*/}
-    { outlet || <ProductInfo />}
+    { outlet || <ProductInfo /> }
     </>
   )
 }
 
 const ProductInfo = () => {
+
   return(
     <>
     <h1>Products</h1>
