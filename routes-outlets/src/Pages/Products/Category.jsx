@@ -2,22 +2,22 @@ import React from 'react'
 import { useOutlet, useParams } from 'react-router-dom';
 
 const Category = () => {
-  const {id, catergory} = useParams()
+  const {id, category} = useParams()
   console.log(id);
-  console.log(catergory);
+  console.log(category);
 
-  
+
   const outlet = useOutlet();
   return (
     <>
-    { outlet || <Categories /> }
+    { outlet || <CategoryInfo /> }
     </>
   )
 }
 
 export default Category
 
-const Categories = () => {
+const CategoryInfo = () => {
   return(
     <div>
       <h1>Category</h1>
