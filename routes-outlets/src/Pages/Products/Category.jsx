@@ -1,11 +1,15 @@
 import React from 'react'
-import { useOutlet } from 'react-router-dom';
+import { useOutlet, useParams } from 'react-router-dom';
 
 const Category = () => {
+  const {id, catergory} = useParams()
+  console.log(id);
+  console.log(catergory);
+
+  
   const outlet = useOutlet();
   return (
     <>
-    { /* Hvis outlet er tom, så vis ProductInfo ellers vis indhold af outlet*/}
     { outlet || <Categories /> }
     </>
   )
