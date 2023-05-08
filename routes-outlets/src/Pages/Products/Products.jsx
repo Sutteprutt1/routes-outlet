@@ -5,6 +5,7 @@ const Products = () => {
   const outlet = useOutlet();
   return (
     <>
+    { /* Hvis outlet er tom, så vis ProductInfo ellers vis indhold af outlet*/}
     { outlet || <ProductInfo />}
     </>
   )
