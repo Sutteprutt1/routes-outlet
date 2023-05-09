@@ -7,6 +7,7 @@ const Home = () => {
     lastname: "",
     address: "",
     city: "",
+    zipcode: ""
   };
 
   const [state, setState] = useState(intialState);
@@ -18,7 +19,7 @@ const Home = () => {
   };
 
   // Bruges så hvis ikke behøver at skrive state.name osv nede i vores value.
-  const { name, lastname, address, city } = state;
+  const { name, lastname, address, city, zipcode } = state;
 
   console.log(state);
 
@@ -28,14 +29,14 @@ const Home = () => {
       <input type="text" name="lastname" value={lastname} onChange={handleChange} placeholder="Efternavn" />
       <input type="text" name="address" value={address} onChange={handleChange} placeholder="Adresse" />
       <input type="text" name="city" value={city} onChange={handleChange} placeholder="By" />
-      <input type="text" name="zipcode" value={state.zipcode} onChange={handleChange} placeholder="Zipcode" />
+      <input type="text" name="zipcode" value={zipcode} onChange={handleChange} placeholder="Zipcode" />
 
       <br />
       Firstname: {name} <br />
       Lastname: {lastname} <br />
       Address: {address} <br />
       City: {city} <br />
-      Zipcode: {state.zipcode} <br />
+      Zipcode: {zipcode} <br />
 
       <button onClick={() => setState(intialState)}>Reset</button>
     </form>
