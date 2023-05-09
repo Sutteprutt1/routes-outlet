@@ -74,7 +74,9 @@ const Home = () => {
         </div>
       </div>
 
-      <button onClick={() => setState(intialState)}>Reset</button>
+      <button onClick={() => setState(intialState)}>
+        Reset
+      </button>
     </form>
   );
 };
