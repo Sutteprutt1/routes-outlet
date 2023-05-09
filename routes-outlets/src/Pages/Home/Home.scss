@@ -1,0 +1,48 @@
+.form-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid gray;
+
+    &:focus {
+      outline: none;
+      border-color: blue;
+    }
+  }
+
+  .formInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    .names,
+    .cityInfo {
+      margin: 0.5rem 0;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00ff00;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #00c700;
+    }
+  }
+}
