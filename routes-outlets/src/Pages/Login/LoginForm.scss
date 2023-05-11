@@ -1,0 +1,48 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+  
+    p {
+      margin-bottom: 20px;
+    }
+  
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .login-button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .cancel-button {
+      background-color: #ccc;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
