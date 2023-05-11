@@ -2,11 +2,11 @@ import AppRouter from './App/AppRouter/AppRouter';
 import Footer from './Components/Partials/Footer';
 import Header from './Components/Partials/Header';
 import { useFetch } from './Hooks/fetch';
-import ProductsTest from './ProductsTest';
+import ProductItems from './Components/ProductItems';
 
 function App() {
-  const url = "https://dummyjson.com/products"
-  const { apiData, loading, error } = useFetch(url, "products");
+  const url = "https://api.mediehuset.net/bakeonline/products"
+  const { apiData, loading, error } = useFetch(url, "items");
   console.log(apiData);
 
   //Tjekker om det er færdig med at load
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
     <Header />
-    <ProductsTest items={apiData} />
+    <ProductItems items={apiData} />
     <AppRouter />
     <Footer />
     </>

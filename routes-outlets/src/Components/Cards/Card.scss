@@ -1,0 +1,27 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2em 1em;
+  margin: 5em;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #a0a0a0;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-teaser {
+  margin-bottom: 10px;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
