@@ -5,7 +5,7 @@ import About from "../../Pages/About/About";
 import Details from "../../Pages/Products/Details";
 import Products from "../../Pages/Products/Products";
 import Category from "../../Pages/Products/Category";
-import LoginForm from "../../Pages/Login/LoginForm";
+import Login from "../../Pages/Login/Login";
 
 const AppRouter = () => {
   return (
@@ -18,7 +18,7 @@ const AppRouter = () => {
             <Route path=":id" element={<Details />} />
           </Route>
         </Route>
-        <Route path="/login" element={<LoginForm />}/>
+        <Route path="/login" element={<Login />}/>
     </Routes>
   );
 };
