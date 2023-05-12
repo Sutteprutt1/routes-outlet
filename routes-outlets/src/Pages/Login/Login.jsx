@@ -3,23 +3,22 @@ import "./Login.scss";
 import { useLoginStore } from "./useLoginStore";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Login = () => {
+  const navigate = useNavigate();
 
-const navigate = useNavigate()
+  const { loggedIn, setLoggedIn } = useLoginStore();
 
-const { loggedIn, setLoggedIn } = useLoginStore();
-
-  const [user, setUser] = useState({
+  const initialState = {
     username: "",
     password: "",
-  });
+  };
+
+  const [user, setUser] = useState(initialState);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
 
-    setUser(user => ({
+    setUser((user) => ({
       ...user,
       [name]: value,
     }));
@@ -39,16 +38,15 @@ const { loggedIn, setLoggedIn } = useLoginStore();
         body: JSON.stringify({ username, password }),
       });
 
-      if(res.ok) {
+      if (res.ok) {
         const user = await res.json();
-        setLoggedIn(user)
-        navigate("/")
+        setLoggedIn(user);
+        navigate("/");
       } else {
-        console.log("Request failed " , res.status);
+        console.log("Request failed ", res.status);
       }
-
     } catch (err) {
-        console.error(err)
+      console.error(err);
     }
   };
 
@@ -75,9 +73,8 @@ const { loggedIn, setLoggedIn } = useLoginStore();
         className="input-field"
       />
       <button className="login-button">Log in</button>
-      <button className="cancel-button">Cancel</button> {
-        loggedIn ? "Du er nu logged in" : " "
-      }
+      <button className="cancel-button">Cancel</button>{" "}
+      {loggedIn ? "Du er nu logged in" : " "}
     </form>
   );
 };

@@ -4,7 +4,6 @@ import { createJSONStorage, persist } from "zustand/middleware"
 
 export const useLoginStore = create(persist((set) => ({
 
-    
         loggedIn: false,
         user: "",
         user_id: ""
