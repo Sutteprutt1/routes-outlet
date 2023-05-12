@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import React, {ProductItems} from "react";
 
 const [currentPage, setCurrentPage] = useState(1);
 
@@ -23,7 +24,12 @@ return (
         </ul>
     </div>
     <div>
-            {Array.from({length: totalPages}).map(())}
+            {Array.from({length: totalPages}).map((item, index) => (
+                <button key={index} onClick={() => handlePageChange(index + 1)}
+                disabled={currentPage === index + 1}>
+
+                </button>
+            ))}
     </div>
     </div>
 )
